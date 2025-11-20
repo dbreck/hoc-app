@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route, ScrollRestoration } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,7 +12,7 @@ import CommercialPainting from './pages/services/CommercialPainting';
 
 // ScrollToTop component to ensure pages start at the top on navigation
 const ScrollToTop = () => {
-  const { pathname } = React.useMemo(() => new URL(window.location.href), [window.location.href]);
+  const { pathname } = useLocation();
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
