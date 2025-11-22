@@ -13,11 +13,9 @@ const Home: React.FC = () => {
           />
         </div>
 
-        {/* Coming Soon Message with Gradient */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple via-brand-orange to-yellow-400">
-            Something Beautiful is Coming Soon
-          </span>
+        {/* Coming Soon Message */}
+        <h1 className="text-5xl md:text-7xl font-light italic mb-8 leading-tight text-gray-100">
+          Something Beautiful is Coming Soon
         </h1>
       </div>
     </div>
