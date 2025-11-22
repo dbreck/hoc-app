@@ -26,8 +26,11 @@ const App: React.FC = () => {
     <HashRouter>
       <ScrollToTop />
       <Routes>
+        {/* Home page without Layout (no header/footer) */}
+        <Route index element={<Home />} />
+
+        {/* All other pages with Layout */}
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="contact" element={<Contact />} />
