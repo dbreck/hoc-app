@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import FullHome from './pages/FullHome';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
@@ -26,11 +27,12 @@ const App: React.FC = () => {
     <HashRouter>
       <ScrollToTop />
       <Routes>
-        {/* Home page without Layout (no header/footer) */}
+        {/* Coming soon page without Layout (no header/footer) */}
         <Route index element={<Home />} />
 
         {/* All other pages with Layout */}
         <Route path="/" element={<Layout />}>
+          <Route path="preview" element={<FullHome />} />
           <Route path="about" element={<About />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="contact" element={<Contact />} />
