@@ -35,7 +35,7 @@ const Layout: React.FC = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center group" onClick={closeMenu}>
               <img
-                src="/hoc-logo-horiz-1.png"
+                src="/hoc-logo-horiz.svg"
                 alt="Haus of Color Residential Painting"
                 className="h-12 w-auto group-hover:scale-105 transition-transform"
               />
@@ -202,7 +202,7 @@ const Layout: React.FC = () => {
             <div>
               <div className="mb-6">
                 <img
-                  src="/hoc-logo-horiz-1.png"
+                  src="/hoc-logo-horiz.svg"
                   alt="Haus of Color Residential Painting"
                   className="h-10 w-auto brightness-0 invert"
                 />

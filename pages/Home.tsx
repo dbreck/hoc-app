@@ -7,7 +7,7 @@ const Home: React.FC = () => {
         {/* Logo - 50% smaller */}
         <div className="mb-16 animate-fade-in">
           <img
-            src="/hoc-logo.svg"
+            src="/hoc-logo-final.svg"
             alt="Haus of Color Residential Painting"
             className="w-full max-w-xl mx-auto drop-shadow-2xl"
           />
