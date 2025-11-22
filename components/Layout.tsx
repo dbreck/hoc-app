@@ -11,7 +11,7 @@ const Layout: React.FC = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/preview' },
     { name: 'About', path: '/about' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Contact', path: '/contact' },
@@ -43,9 +43,9 @@ const Layout: React.FC = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              <Link 
-                to="/" 
-                className={`text-sm font-medium transition-colors hover:text-brand-purple ${isActive('/') ? 'text-brand-purple' : 'text-gray-600'}`}
+              <Link
+                to="/preview"
+                className={`text-sm font-medium transition-colors hover:text-brand-purple ${isActive('/preview') ? 'text-brand-purple' : 'text-gray-600'}`}
               >
                 Home
               </Link>
@@ -116,10 +116,10 @@ const Layout: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-lg overflow-y-auto max-h-[calc(100vh-5rem)]">
             <div className="px-4 py-6 space-y-4">
-              <Link 
-                to="/" 
+              <Link
+                to="/preview"
                 onClick={closeMenu}
-                className={`block text-lg font-medium ${isActive('/') ? 'text-brand-purple' : 'text-gray-800'}`}
+                className={`block text-lg font-medium ${isActive('/preview') ? 'text-brand-purple' : 'text-gray-800'}`}
               >
                 Home
               </Link>
