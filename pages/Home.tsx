@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Coming Soon Message */}
-        <h1 className="text-5xl md:text-7xl font-light italic mb-8 leading-tight text-gray-100">
+        <h1 className="text-3xl md:text-4xl font-script mb-8 leading-relaxed text-gray-100">
           Something Beautiful is Coming Soon
         </h1>
       </div>
