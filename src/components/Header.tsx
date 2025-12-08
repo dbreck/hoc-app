@@ -1,24 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
+import { navLinks, HOME_PATH } from '../config/routes';
 import styles from './Header.module.css';
 import logoColor from '../assets/hoc-logo-horiz.svg';
 import logoWhite from '../assets/hoc-logo-horiz-white.svg';
-
-const navLinks = [
-  { label: 'Services', href: '/services' },
-  { label: 'About', href: '/about' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Contact', href: '/contact' },
-];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Check if we're on the homepage
-  const isHomePage = location.pathname === '/';
+  // Check if we're on the homepage (preview homepage)
+  const isHomePage = location.pathname === HOME_PATH;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,11 +52,19 @@ export function Header() {
   // Only on homepage when not scrolled
   const useLightStyle = isHomePage && !isScrolled;
 
+  // Check if a link is active
+  const isLinkActive = (href: string) => {
+    if (href === HOME_PATH) {
+      return location.pathname === HOME_PATH;
+    }
+    return location.pathname === href || location.pathname.startsWith(href + '/');
+  };
+
   return (
     <header className={`${styles.header} ${isScrolled || !isHomePage ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
-        <Link to="/" className={styles.logo} onClick={handleNavClick}>
+        <Link to={HOME_PATH} className={styles.logo} onClick={handleNavClick}>
           <img src={useLightStyle ? logoWhite : logoColor} alt="Haus of Color Painting" />
         </Link>
 
@@ -72,7 +74,7 @@ export function Header() {
             <Link
               key={link.href}
               to={link.href}
-              className={`${styles.navLink} ${location.pathname === link.href || location.pathname.startsWith(link.href + '/') ? styles.active : ''}`}
+              className={`${styles.navLink} ${isLinkActive(link.href) ? styles.active : ''}`}
             >
               {link.label}
             </Link>
@@ -112,7 +114,7 @@ export function Header() {
             <Link
               key={link.href}
               to={link.href}
-              className={`${styles.mobileNavLink} ${location.pathname === link.href || location.pathname.startsWith(link.href + '/') ? styles.active : ''}`}
+              className={`${styles.mobileNavLink} ${isLinkActive(link.href) ? styles.active : ''}`}
               onClick={handleNavClick}
             >
               {link.label}

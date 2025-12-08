@@ -1,20 +1,7 @@
 import { Link } from 'react-router-dom';
+import { navLinks, serviceLinks, HOME_PATH } from '../config/routes';
 import styles from './Footer.module.css';
 import logoSrc from '../assets/hoc-logo-horiz.svg';
-
-const navLinks = [
-  { label: 'Services', href: '/services' },
-  { label: 'About', href: '/about' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Contact', href: '/contact' },
-];
-
-const serviceLinks = [
-  { label: 'Interior Painting', href: '/services/interior-painting' },
-  { label: 'Exterior Painting', href: '/services/exterior-painting' },
-  { label: 'Cabinet Refinishing', href: '/services/cabinet-refinishing' },
-  { label: 'Commercial Painting', href: '/services/commercial-painting' },
-];
 
 const areas = [
   'Tampa Bay', 'St. Petersburg', 'Clearwater', 'Largo',
@@ -31,7 +18,7 @@ export function Footer() {
         <div className={styles.grid}>
           {/* Brand Column */}
           <div className={styles.brandCol}>
-            <Link to="/" className={styles.logo}>
+            <Link to={HOME_PATH} className={styles.logo}>
               <img src={logoSrc} alt="Haus of Color Painting" />
             </Link>
             <p className={styles.tagline}>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { PageHero } from '../components/PageHero';
 import { CTA } from '../components/CTA';
+import { path } from '../config/routes';
 import styles from './ServicesPage.module.css';
 
 const services = [
@@ -10,28 +11,28 @@ const services = [
     title: 'Interior Painting',
     description: 'Transform your living spaces with fresh, vibrant color. From single rooms to whole-home makeovers, we handle all the details.',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80',
-    link: '/services/interior-painting',
+    link: path('/services/interior-painting'),
   },
   {
     id: 'exterior-painting',
     title: 'Exterior Painting',
     description: "Boost your curb appeal and protect your home from Florida's sun, humidity, and storms with durable exterior coatings.",
     image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
-    link: '/services/exterior-painting',
+    link: path('/services/exterior-painting'),
   },
   {
     id: 'cabinet-refinishing',
     title: 'Cabinet Refinishing',
     description: 'Give your kitchen or bathroom a complete refresh without the cost of replacement. Professional-grade cabinet painting.',
     image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
-    link: '/services/cabinet-refinishing',
+    link: path('/services/cabinet-refinishing'),
   },
   {
     id: 'commercial-painting',
     title: 'Commercial Painting',
     description: 'Keep your business looking sharp with reliable commercial interior and exterior painting. Minimal disruption, maximum results.',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-    link: '/services/commercial-painting',
+    link: path('/services/commercial-painting'),
   },
 ];
 

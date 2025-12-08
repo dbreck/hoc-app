@@ -5,6 +5,29 @@ All notable changes to the Haus of Color website will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-12-08
+
+### Added
+
+- **Staged deployment structure** with preview routes:
+  - `/` now shows a minimal "Coming Soon" page
+  - `/preview/*` contains the full site for client review
+  - Centralized route config in `src/config/routes.ts`
+  - `BASE_PATH` constant for easy go-live switch
+
+- **ComingSoonPage** component with:
+  - Centered logo
+  - "Coming Soon" heading
+  - Tagline: "Professional painting for Tampa Bay"
+  - Tap-to-call phone button
+  - Dark/light theme support
+
+### Changed
+
+- All internal links now use `path()` helper from route config
+- Header, Footer, Services, Hero, CTA components updated to use centralized routes
+- Navigation links imported from route config instead of hardcoded
+
 ## [1.0.0] - 2025-12-08
 
 ### Added

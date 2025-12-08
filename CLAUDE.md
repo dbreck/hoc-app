@@ -28,19 +28,46 @@ npm run lint         # Run ESLint
 
 ## Architecture
 
+### Staged Deployment
+
+The site uses a preview route structure for staged deployment:
+
+- `/` - Coming Soon page (minimal: logo, "Coming Soon", phone number)
+- `/preview/*` - Full site preview for client review
+
+When ready to go live, change `BASE_PATH` in `src/config/routes.ts` from `'/preview'` to `''`.
+
 ### Routes
 
 | Path | Page | Description |
 |------|------|-------------|
-| `/` | HomePage | Hero, services preview, about, FAQ, contact |
-| `/services` | ServicesPage | Services overview with all service cards |
-| `/services/interior-painting` | InteriorPaintingPage | Interior painting service details |
-| `/services/exterior-painting` | ExteriorPaintingPage | Exterior painting service details |
-| `/services/cabinet-refinishing` | CabinetRefinishingPage | Cabinet refinishing service details |
-| `/services/commercial-painting` | CommercialPaintingPage | Commercial painting service details |
-| `/about` | AboutPage | Company story and values |
-| `/faq` | FAQPage | Frequently asked questions |
-| `/contact` | ContactPage | Contact form and info |
+| `/` | ComingSoonPage | Minimal coming soon placeholder |
+| `/preview` | HomePage | Hero, services preview, about, FAQ, contact |
+| `/preview/services` | ServicesPage | Services overview with all service cards |
+| `/preview/services/interior-painting` | InteriorPaintingPage | Interior painting service details |
+| `/preview/services/exterior-painting` | ExteriorPaintingPage | Exterior painting service details |
+| `/preview/services/cabinet-refinishing` | CabinetRefinishingPage | Cabinet refinishing service details |
+| `/preview/services/commercial-painting` | CommercialPaintingPage | Commercial painting service details |
+| `/preview/about` | AboutPage | Company story and values |
+| `/preview/faq` | FAQPage | Frequently asked questions |
+| `/preview/contact` | ContactPage | Contact form and info |
+
+### Route Configuration
+
+All internal links use the centralized route config in `src/config/routes.ts`:
+
+```typescript
+import { path, HOME_PATH, navLinks, serviceLinks } from './config/routes';
+
+// Use path() helper for any route
+<Link to={path('/contact')}>Contact</Link>
+
+// Use HOME_PATH for logo/home links
+<Link to={HOME_PATH}>Home</Link>
+
+// Use pre-built link arrays for navigation
+navLinks.map(link => <Link to={link.href}>{link.label}</Link>)
+```
 
 ### File Structure
 
