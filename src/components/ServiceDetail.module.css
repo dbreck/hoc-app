@@ -1,0 +1,209 @@
+/* === SERVICE DETAIL COMPONENT === */
+.container {
+  /* Wrapper */
+}
+
+/* === HERO IMAGE === */
+.heroImage {
+  margin-bottom: var(--space-12);
+}
+
+.heroImage img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
+
+/* === SECTION TITLE === */
+.sectionTitle {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: var(--text-3xl);
+  }
+}
+
+/* === WHAT WE PAINT === */
+.whatWePaint {
+  background-color: var(--color-off-white);
+}
+
+.paintList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .paintList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.paintList li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+.paintList svg {
+  flex-shrink: 0;
+  color: var(--color-accent-green);
+}
+
+/* === PROCESS === */
+.process {
+  background-color: var(--color-white);
+}
+
+.processGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  background-color: var(--color-off-white);
+  border-radius: var(--radius-xl);
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-on-dark);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepTitle {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.stepDesc {
+  color: var(--color-text-secondary);
+}
+
+/* === BENEFITS === */
+.benefits {
+  background-color: var(--color-off-white);
+}
+
+.benefitsList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .benefitsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.benefitsList li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.benefitsList svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+.benefitsList span {
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+/* === EXTRA SECTION === */
+.extra {
+  background-color: var(--color-white);
+}
+
+.extraContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.extraContent p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.extraContent p:last-child {
+  margin-bottom: 0;
+}
+
+/* === WARRANTY === */
+.warranty {
+  padding: var(--space-12) 0;
+  background-color: var(--color-white);
+}
+
+.warrantyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-off-white) 100%);
+  border-radius: var(--radius-2xl);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .warrantyCard {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.warrantyCard svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.warrantyTitle {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+
+.warrantyText {
+  color: var(--color-text-secondary);
+}

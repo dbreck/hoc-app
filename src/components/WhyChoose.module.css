@@ -1,0 +1,91 @@
+/* === WHY CHOOSE SECTION === */
+.whyChoose {
+  background-color: var(--color-white);
+}
+
+/* === HEADER === */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === GRID === */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* === CARD === */
+.card {
+  text-align: center;
+  padding: var(--space-8) var(--space-5);
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-xl);
+  transition: transform var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--space-5);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-lg);
+  color: var(--color-primary);
+}
+
+.cardTitle {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-3);
+}
+
+.cardDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 0;
+}

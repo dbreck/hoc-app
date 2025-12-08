@@ -1,0 +1,45 @@
+/* === THEME TOGGLE BUTTON === */
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-text-on-dark);
+  transition: transform var(--duration-fast) var(--ease-out),
+              background-color var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+}
+
+.toggle:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.08);
+}
+
+.toggle:active {
+  transform: scale(0.95);
+}
+
+/* When header is scrolled (dark icon on light background) */
+.toggle.scrolled {
+  background-color: var(--color-gray-100);
+  color: var(--color-text-primary);
+}
+
+.toggle.scrolled:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+/* Dark theme adjustments */
+:global([data-theme="dark"]) .toggle.scrolled {
+  background-color: var(--color-gray-100);
+  color: var(--color-text-primary);
+}
+
+:global([data-theme="dark"]) .toggle.scrolled:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}

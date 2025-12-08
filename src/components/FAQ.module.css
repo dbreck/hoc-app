@@ -1,0 +1,121 @@
+/* === FAQ SECTION === */
+.faq {
+  background-color: var(--color-white);
+}
+
+/* === HEADER === */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === ACCORDION === */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* === ITEM === */
+.item {
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow var(--duration-base);
+}
+
+.item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.item.open {
+  box-shadow: var(--shadow-md);
+}
+
+/* === QUESTION (Button) === */
+.question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  transition: background-color var(--duration-fast);
+}
+
+.question:hover {
+  background-color: var(--color-gray-100);
+}
+
+.icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.iconVertical {
+  transition: transform var(--duration-base) var(--ease-out),
+              opacity var(--duration-base);
+}
+
+.open .iconVertical {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+/* === ANSWER === */
+.answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration-base) var(--ease-out);
+}
+
+.open .answer {
+  grid-template-rows: 1fr;
+}
+
+.answer > p {
+  overflow: hidden;
+  padding: 0 var(--space-6);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 0;
+}
+
+.open .answer > p {
+  padding-bottom: var(--space-5);
+}

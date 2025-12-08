@@ -1,0 +1,172 @@
+/* === CONTACT FORM === */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* === ROW (2-column) === */
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 600px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* === FIELD === */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+/* === INPUTS === */
+.input,
+.select,
+.textarea {
+  padding: var(--space-4);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--duration-fast),
+              box-shadow var(--duration-fast);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+  outline: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236b6b6b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: var(--space-12);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* === SUBMIT BUTTON === */
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--color-text-on-dark);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md), 0 0 0 0 rgba(112, 66, 191, 0.4);
+  transition: background-color var(--duration-fast),
+              transform var(--duration-fast),
+              box-shadow var(--duration-fast);
+  margin-top: var(--space-2);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 0 0 4px rgba(112, 66, 191, 0.2);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submitBtn svg {
+  transition: transform var(--duration-fast);
+}
+
+.submitBtn:hover:not(:disabled) svg {
+  transform: translateX(3px);
+}
+
+/* === DISCLAIMER === */
+.disclaimer {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* === SUCCESS STATE === */
+.success {
+  text-align: center;
+  padding: var(--space-10);
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-xl);
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: var(--space-5);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-full);
+  color: var(--color-primary);
+}
+
+.successTitle {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.successText {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.resetBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  transition: background-color var(--duration-fast),
+              color var(--duration-fast);
+}
+
+.resetBtn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-dark);
+}

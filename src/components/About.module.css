@@ -1,0 +1,122 @@
+/* === ABOUT SECTION === */
+.about {
+  background-color: var(--color-off-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1.1fr;
+    gap: var(--space-16);
+  }
+}
+
+/* === IMAGE COLUMN === */
+.imageCol {
+  position: relative;
+}
+
+.imageWrap {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.imageWrap img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-5) var(--space-6);
+  background-color: var(--color-primary);
+  color: var(--color-text-on-dark);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 900px) {
+  .badge {
+    right: calc(var(--space-8) * -1);
+  }
+}
+
+.badgeNumber {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-extrabold);
+  line-height: 1;
+}
+
+.badgeText {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  opacity: 0.9;
+}
+
+/* === CONTENT COLUMN === */
+.contentCol {
+  /* padding-right: var(--space-6); */
+}
+
+.label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  margin-bottom: var(--space-6);
+}
+
+.text {
+  margin-bottom: var(--space-8);
+}
+
+.text p {
+  color: var(--color-text-secondary);
+}
+
+.text strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-semibold);
+}
+
+/* === VALUES LIST === */
+.values {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.values li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+.values svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-accent-green);
+}

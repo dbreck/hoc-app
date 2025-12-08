@@ -1,0 +1,206 @@
+/* =====================================================
+   HAUS OF COLOR — Design Tokens
+   A photography-forward site for a trusted painting contractor.
+   Premium but approachable. Confident but not aggressive.
+   ===================================================== */
+
+:root {
+  /* === COLORS: Backgrounds === */
+  --color-white: #ffffff;
+  --color-off-white: #fafaf8;
+  --color-gray-50: #f5f4f2;
+  --color-gray-100: #e8e7e5;
+  --color-gray-200: #d4d3d1;
+
+  /* === COLORS: Text === */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #6b6b6b;
+  --color-text-on-dark: #ffffff;
+  --color-text-on-dark-muted: rgba(255, 255, 255, 0.8);
+
+  /* === COLORS: Brand Accents === */
+  /* Used sparingly — CTAs, links, icons only */
+  --color-primary: #7042bf;
+  --color-primary-hover: #5a35a0;
+  --color-primary-light: #ebe5f5;
+
+  /* Supporting accents from logo */
+  --color-accent-green: #38971f;
+  --color-accent-gold: #f59e0b;
+  --color-accent-coral: #d75575;
+  --color-accent-blue: #3e55fc;
+
+  /* === COLORS: Semantic === */
+  --color-success: #38971f;
+  --color-error: #dc2626;
+  --color-warning: #f59e0b;
+
+  /* === COLORS: Overlays === */
+  --overlay-dark: rgba(26, 26, 26, 0.6);
+  --overlay-darker: rgba(26, 26, 26, 0.75);
+  --overlay-light: rgba(255, 255, 255, 0.9);
+
+  /* === TYPOGRAPHY: Font Families === */
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* === TYPOGRAPHY: Font Sizes === */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1.0625rem; /* 17px - comfortable reading */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.875rem;   /* 30px */
+  --text-4xl: 2.25rem;    /* 36px */
+  --text-5xl: 3rem;       /* 48px */
+  --text-6xl: 3.75rem;    /* 60px */
+
+  /* === TYPOGRAPHY: Font Weights === */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* === TYPOGRAPHY: Line Heights === */
+  --leading-none: 1;
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* === TYPOGRAPHY: Letter Spacing === */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.05em;
+
+  /* === SPACING === */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* === LAYOUT === */
+  --container-max: 1280px;
+  --container-narrow: 900px;
+  --container-wide: 1440px;
+  --container-padding: var(--space-6);
+
+  /* === BORDERS === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* === SHADOWS === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+
+  /* === TRANSITIONS === */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* === Z-INDEX === */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+}
+
+/* === RESPONSIVE CONTAINER PADDING === */
+@media (min-width: 768px) {
+  :root {
+    --container-padding: var(--space-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: var(--space-12);
+  }
+}
+
+/* =====================================================
+   DARK THEME
+   Rich, warm darks with adjusted brand colors
+   ===================================================== */
+[data-theme="dark"] {
+  /* === COLORS: Backgrounds === */
+  --color-white: #0a0a0a;
+  --color-off-white: #121212;
+  --color-gray-50: #1a1a1a;
+  --color-gray-100: #252525;
+  --color-gray-200: #333333;
+
+  /* === COLORS: Text === */
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #b0b0b0;
+  --color-text-muted: #888888;
+  --color-text-on-dark: #ffffff;
+  --color-text-on-dark-muted: rgba(255, 255, 255, 0.8);
+
+  /* === COLORS: Brand Accents (adjusted for dark backgrounds) === */
+  --color-primary: #9b6dd4;
+  --color-primary-hover: #b388eb;
+  --color-primary-light: rgba(155, 109, 212, 0.15);
+
+  /* Supporting accents - slightly brighter for dark mode */
+  --color-accent-green: #4cb82e;
+  --color-accent-gold: #fbbf24;
+  --color-accent-coral: #e5738f;
+  --color-accent-blue: #5a6fff;
+
+  /* === COLORS: Semantic === */
+  --color-success: #4cb82e;
+  --color-error: #f87171;
+  --color-warning: #fbbf24;
+
+  /* === COLORS: Overlays === */
+  --overlay-dark: rgba(0, 0, 0, 0.7);
+  --overlay-darker: rgba(0, 0, 0, 0.85);
+  --overlay-light: rgba(18, 18, 18, 0.95);
+
+  /* === SHADOWS (more subtle in dark mode) === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* === THEME TRANSITION === */
+/* Apply smooth transitions for theme switching */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color var(--duration-slow) var(--ease-out),
+              border-color var(--duration-slow) var(--ease-out),
+              color var(--duration-slow) var(--ease-out),
+              box-shadow var(--duration-slow) var(--ease-out) !important;
+}
